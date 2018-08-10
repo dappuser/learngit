@@ -25,9 +25,26 @@
 本地库的所有内容推送到远程库上 $ git push -u origin master（第一次）
                            $ git push origin master（往后）
                            
-远程库克隆 $ git clone git@github.com:（githup账户名）/库名.git  
+远程库克隆 $ git clone git@github.com:（githup账户名）/库名.git 
 
-查看远程库信息 $ git remote     
+查看远程库信息 $ git remote 
+
+远程上传至分支 $ git push origin 本地分支名：远程分支名
+
+##远程合并方法
+从远程的origin仓库的master分支下载代码到本地的  $ git fetch origin master
+
+比较本地库与远程库的区别 $ git log -p master.. origin/master
+
+合并远\本两库 $ git merge origin/master
+
+撤销合并 $ git merge --abort 
+
+从远程的origin仓库的master分支下载到本地并新建一个分支  $ git fetch origin master:分支名
+
+查看本地与分支区别 $ git diff 分支名  之后合并
+
+
 ###分支
 创建并转到分支 $ git checkout -b 分支名
 
@@ -45,3 +62,6 @@
  
 给分支打标签 $ git tag 标签名
                     
+$ sudo lsof -i:端口号 查占用的pid号   $ sudo kill -9 pid号 切掉进程
+
+导入新angular项目 sudo npm install --unsafe-perm -g polymer-cli
